@@ -52,15 +52,16 @@
         <option value="decimal" {{ source-decimal }}>Dezimal</option>
     </select>
     <br>
-    <input name="input" id="input" style="margin-right :56px;" input type="text"
-           onblur="this.value=removeSpaces(this.value);">{{ input }}</input>
+    <input name="input" autocomplete="off" id="input" style="margin-right :56px;" type="text" value="{{ input }}" onblur="this.value=removeSpaces(this.value);">
     <br>
-
 
     <button>calculate</button>
 </form>
 <br><br><br>
 <hr>
 {{ results }}
+<script>
+    document.main.input.select();
+</script>
 </body>
 </html>
